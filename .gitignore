@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# But not the files I want to version
+!.bashrc
+
+!.gitignore
