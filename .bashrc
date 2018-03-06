@@ -10,9 +10,9 @@ export PATH="$PATH:/usr/local/bin/matlab"
 export PATH="/usr/sbin:/sbin:/bin:/usr/games:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
-export PATH="/home/brendan/.gem/ruby/2.4.0/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$PATH:/bin"
+export PATH="$PATH:/home/brendan/.gem/ruby/2.5.0/bin"
 
 # Shortcuts
 
