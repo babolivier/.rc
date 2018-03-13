@@ -1,4 +1,3 @@
-eval "$(direnv hook bash)"
 source /etc/bash.bashrc
 
 export GOPATH="/home/brendan/go"
@@ -94,3 +93,5 @@ PS1="${COLOR_LGRAY}[\t] ${COLOR_LCYAN}\u@\H${COLOR_NONE}:${COLOR_LMAGENTA}\w${CO
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	source /etc/profile.d/vte.sh
 fi
+
+eval "$(direnv hook bash)"
