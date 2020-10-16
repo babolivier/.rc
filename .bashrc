@@ -15,17 +15,8 @@ export PATH="$PATH:/home/brendan/.gem/ruby/2.5.0/bin"
 
 # Shortcuts
 
-alias matlab="/usr/local/bin/matlab/matlab"
 alias spaces2tab='grep -Er "*+" --exclude-dir={.git,node_modules,vendor} --exclude="*.yml" --exclude="*.md" --exclude=".gitignore" | grep ":" | cut -d":" -f1 | sort -u | xargs sed -Ei "s/^    /\t/"'
-alias vpn='sudo openvpn --config ~/Documents/ccrypto-nl-tcp.ovpn.ovpn'
-alias pitivi='optirun flatpak run org.pitivi.Pitivi//stable'
-alias ffupdate='pacaur -S --noconfirm --noedit firefox-always-nightly'
 alias update='yaourt -Syua --noconfirm --ignore java-testng --ignore javahelp2 --ignore jgraphx --ignore scilab --ignore firefox-always-nightly --ignore postgresql --ignore postgresql-libs'
-alias backuphome='rsync --links --recursive --progress --exclude=".cache" $HOME/*'
-alias new-gb-project='mkdir src vendor bin pkg && git init && echo -e "_test\nbin\npkg\nvendor/src\nconfig.yaml\n*.db" > .gitignore'
-alias gocode-lookup='gocode set package-lookup-mode'
-alias osspawns1='openstack server create --key-name brendan --flavor eeb4ccc9-faa0-4afb-955e-6a0224f93055 --image 839d5704-2e75-481f-85d1-86cb07ef6ba4'
-alias osspawns1-ubuntu1604='openstack server create --key-name brendan --flavor eeb4ccc9-faa0-4afb-955e-6a0224f93055 --image 71b02300-b1d3-4956-bd5b-b99f3134fd10'
 
 alias l='ls'
 alias ll='ls -l'
@@ -45,28 +36,6 @@ alias gpl='git pull'
 alias s='sudo systemctl'
 alias log='sudo journalctl -u'
 alias logf='sudo journalctl -fu'
-
-#source /usr/share/nvm/init-nvm.sh
-alias nv7="nvm use --delete-prefix v7.10"
-
-# Matrix
-
-alias goneb="cd ~/Documents/matrix/go-neb && BIND_ADDRESS=:4050 BASE_URL=http://localhost:4050 DATABASE_TYPE=sqlite3 DATABASE_URL=go-neb.db?_busy_timeout=5000 bin/go-neb"
-
-## Dendrite
-
-alias kafstart="/home/brendan/Documents/matrix/dendrite/kafka/bin/kafka-server-start.sh -daemon /home/brendan/Documents/matrix/dendrite/kafka/config/server.properties"
-alias denproxy='./bin/client-api-proxy \
---bind-address ":8448" \
---sync-api-server-url "http://localhost:7773" \
---client-api-server-url "http://localhost:7771" \
---media-api-server-url "http://localhost:7774" \
---public-rooms-api-server-url "http://localhost:7775" \
---tls-cert _test/federation_cert.pem \
---tls-key _test/federation_key.pem'
-alias denmono='./bin/dendrite-monolith-server \
- --tls-cert "_test/federation_cert.pem" \
- --tls-key "_test/federation_key.pem"'
 
 ## Additional scripts (eg completion)
 for f in ~/.local/share/bash/*; do source $f; done
